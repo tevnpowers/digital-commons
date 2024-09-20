@@ -1,10 +1,4 @@
 <!DOCTYPE html>
-<!--
-	TODO:
-	1. DONE - intersection observer animation
-	2. nav menu font color (mix-blend mode) - https://css-tricks.com/reverse-text-color-mix-blend-mode/
-	3. responsiveness
--->
 <html lang="en">
 	<head>
 		<meta charset="UTF-8">
@@ -26,9 +20,9 @@
 					</h1>
 				</div>
 				<div class="nav-menu">
-					<a href="#work">our work</a>
-					<a href="#team">team</a>
-					<a href="#contact">contact</a>
+					<a href="#work" class="nav-menu-item">our work</a>
+					<a href="#team" class="nav-menu-item">team</a>
+					<a href="#contact" class="nav-menu-item">contact</a>
 				</div>
 			</div>
 			<div class="hero-tagline">
@@ -146,16 +140,15 @@
 				entries.forEach((entry) => {
 					// Add the scroll animation class to intersecting entries
 					if (entry.isIntersecting) {
-						entry.target.classList.add('scroll-animation')
+						// Trigger scroll animation by adding the class
+						entry.target.classList.add('scroll-animation');
+						
+						// We can stop observing an element after 
+						observer.unobserve(entry.target);
 					}
-					/* 
-					else {
-						entry.target.classList.remove('scroll-animation')
-					}
-					*/
 				})
 			}, {
-				threshold: 0.25,
+				threshold: 0.5,
 				/*rootMargin: "-24px",*/
 			}
 		);
@@ -169,17 +162,11 @@
 		}
 
 		// Retrieve and observe all elements with an animation class
-		const headings = document.querySelectorAll('.header-animation');
-		observeElements(headings);
-
-		const texts = document.querySelectorAll('.text-animation');
-		observeElements(texts);
-
-		const cards = document.querySelectorAll('.card-animation');
-		observeElements(cards);
-
-		const team = document.querySelectorAll('.team-animation');
-		observeElements(team);
+		// so we can trigger the scroll animation
+		observeElements(document.querySelectorAll('.header-animation'));
+		observeElements(document.querySelectorAll('.text-animation'));
+		observeElements(document.querySelectorAll('.card-animation'));
+		observeElements(document.querySelectorAll('.team-animation'));
 
 		// Team bio tabbed button events
 		function showBio(evt, name) {
@@ -202,7 +189,6 @@
 			document.getElementById(name + "-bio").style.display = "block";
 			evt.currentTarget.className += " active";
 			evt.currentTarget.className += " selected-btn";
-
 		}
 
 		// Get an element to show by default and click on it

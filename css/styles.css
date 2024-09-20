@@ -43,25 +43,25 @@ html, body {
 }
 
 .content-container {
-	width: 60%;
 	display: flex;
 	flex-direction: column;
 	align-items: center;
 	justify-content: center;
+	width: 85%;
 	margin: 64px 0;
 }
 
 .content-container h2 {
-	margin-top: 0;
+	margin: 0;
 	font-family: 'Pixelify Sans';
-	font-size: 60px;
 	font-weight: normal;
+	font-size: 44px;
 	/* -webkit-text-stroke: 1px black; */
 }
 
 .content-container p {
 	font-family: 'Source Code Pro';
-	font-size: 24px;
+	font-size: 18px;
 	width: 100%;
 }
 
@@ -99,8 +99,8 @@ html, body {
 	margin: 0;
 	color: var(--secondary-color);
 	font-family: 'Pixeled';
-	font-size: 32px;
-	line-height: 48px;
+	font-size: 22px;
+	line-height: 33px;
 	letter-spacing: normal;
 	text-transform: uppercase;
 	-webkit-text-stroke: 1px black;
@@ -109,61 +109,36 @@ html, body {
 }
 
 .nav-menu {
+	display: none;
 	position: fixed;
 	top: 24px;
 	right: 24px;
 	margin-right: 48px;
-	display: flex;
 	gap: 42px;
-
+	z-index: 1;
 	/* border: 2px solid white; */
 }
 
-.nav-menu a {
-	color: white;
+.nav-menu-item {
 	font-family: 'Source Code Pro';
 	font-size: 24px;
 	font-weight: 600;
 	text-decoration: none;
 	text-transform: capitalize;
-}
-
-/*
-#navbar {
-	align-self: flex-start;
-  position: sticky;
-  top: 0;
-  overflow: hidden;
-  background-color: #333;
-}
-
-#navbar a {
-	float: left;
-	display: block;
-	color: #f2f2f2;
-	text-align: center;
-	padding: 14px 16px;
-	text-decoration: none;
-	font-size: 17px;
-  }
-  
-  #navbar a:hover {
-	background-color: #ddd;
-	color: black;
-  }
-  
-  #navbar a.active {
-	background-color: #04AA6D;
 	color: white;
-  }
-  
-*/
+}
+
+.nav-menu-item-black {
+	color: black;
+}
 
 .hero-tagline {
 	color: white;
 	font-family: 'Pixelify Sans';
-	font-size: 64px;
-	margin-top: 100px;
+	font-size: 32px;
+	margin-top: 50%;
+	width: 75%;
+	text-align: center;
 }
 
 /* Work section */
@@ -180,24 +155,16 @@ html, body {
 }
 
 .cards-container {
-	margin: 28px 0 42px 0;
+	margin: 12px 0 0 0;
 	display: grid;
 	grid-template-columns: 1fr;
 	grid-auto-rows: 1fr;
-	gap: 48px;
+	gap: 18px;
 	width: 100%;
-
-	/*
-	flex-direction: column;
-	align-items: center;
-	justify-content: center;
-	*/
-	/*border: 2px solid white;*/
 }
 
 .card {
 	background-color: white;
-	/* border: 6px solid var(--secondary-color); */
 	border-radius: 8px;
 	width: 100%;
 	display: flex;
@@ -223,7 +190,7 @@ html, body {
 }
 
 .card-icon img {
-	width: 60%;
+	width: 100%;
 }
 
 .card-text {
@@ -232,26 +199,27 @@ html, body {
 	flex-direction: column;
 	align-items: start;
 	justify-content: center;
-	margin: 24px 0;
+	margin: 14px 8px;
 }
 
 .card-text h3 {
 	margin: 0;
 	font-family: 'Source Code Pro';
-	font-size: 28px;
+	font-size: 15px;
 	color: var(--primary-color);
+	text-align: left;
 	text-transform: uppercase;
 }
 
 .card-text p {
 	color: black;
 	margin: 0;
-	font-size: 21px;
+	font-size: 14px;
 }
-
 
 /* Team section */
 .team {
+	overflow: hidden;
 	background-color: var(--secondary-color);
 }
 
@@ -266,9 +234,10 @@ html, body {
 .team-imgs {
 	width: 100%;
 	display: flex;
-	align-items: center;
+	align-items: start;
 	justify-content: space-between;
-	gap: 36px;
+
+	gap: 0px;
 	/* border: 2px solid white; */
 }
 
@@ -287,13 +256,12 @@ html, body {
 	flex-direction: column;
 	align-items: center;
 	justify-content: center;
-	flex-wrap: wrap;
 }
 
 .name-label, .title-label {
 	margin: 0;
 	font-family: 'Source Code Pro';
-	font-size: 20px;
+	font-size: 9px;
 	color: var(--primary-color);
 }
 
@@ -302,26 +270,19 @@ html, body {
 }
 
 .headshot-btn img {
-	max-width: 100%;
-	border-radius: 12px;
-	margin-bottom: 8px;
+	max-width: 85%;
+	border-radius: 6px;
+	margin-bottom: 4px;
 
 	opacity: 90%;
-	border: 4px solid rgba(255,255,255,0);
+	border: 2px solid rgba(255,255,255,0);
 	/* border: 6px solid var(--primary-color); */
-}
-
-.headshot-btn:hover {
-	& img {
-		opacity: 95%;
-		border: 4px solid white;
-	}
 }
 
 .headshot-btn:active, .selected-btn {
 	& img {
 		opacity: 100%;
-		border: 4px solid var(--primary-color);
+		border: 2px solid var(--primary-color);
 	}
 }
 
@@ -330,7 +291,7 @@ html, body {
 }
 
 .bio p {
-	font-size: 22px;
+	font-size: 16px;
 }
 
 .bio a, .bio a:visited {
@@ -348,19 +309,19 @@ html, body {
 
 .contact p {
 	color: white;
+	text-align: center;
 }
 
 .contact a {
 	font-family: 'Source Code Pro';
-	font-size: 28px;
+	font-size: 22px;
 	text-decoration: none;
 	text-align: center;
 	color: black;
 	background-color: white;
 
 	margin-top: 32px;
-	padding: 12px;
-	border: 5px solid white;
+	padding: 8px;
 	border-radius: 8px;
 
 	cursor: pointer;
@@ -369,14 +330,13 @@ html, body {
 
 .contact a:hover {
 	background-color: var(--secondary-color);
-	border: 5px solid var(--secondary-color);
 }
 
 .contact a img {
-	height: 48px;
-	width: 48px;
+	height: 36px;
+	width: 36px;
 	margin: 0;
-	margin-bottom: -15px;
+	margin-bottom: -10px;
 }
 
 .scroll-view-margin {
@@ -401,11 +361,182 @@ html, body {
 
 .team-animation {
 	opacity: 0;
-	transform: translateX(300px);
+	/* transform: translateX(300px); */
 	transition: all 0.5s ease;
 }
 
 .scroll-animation {
 	opacity: 1;
 	transform: translate(0,0);
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+	.content-container {
+		width: 80%;
+		margin: 64px 0;
+	}
+	
+	.content-container h2 {
+		font-size: 56px;
+	}
+
+	.content-container p {
+		font-size: 22px;
+	}
+
+	.brandmark h1 {
+		font-size: 32px;
+		line-height: 48px;
+	}
+
+	.hero-tagline {
+		font-size: 56px;
+		margin-top: 100px;
+	}
+
+	.cards-container {
+		margin: 0;
+		gap: 30px;
+	}
+
+	.card-icon img {
+		width: 60%;
+	}
+
+	.card-text {
+		flex: 8;
+		margin: 24px 0;
+	}
+	
+	.card-text h3 {
+		margin: 0;
+		font-size: 24px;
+	}
+
+	.card-text p {
+		margin: 0;
+		font-size: 18px;
+	}
+
+	.team-imgs {
+		gap: 18px;
+	}
+
+	.headshot-btn img {
+		max-width: 100%;
+		border-radius: 12px;
+		margin-bottom: 8px;
+		border: 4px solid rgba(255,255,255,0);
+	}
+
+	.headshot-btn:active, .selected-btn {
+		& img {
+			border: 4px solid var(--primary-color);
+		}
+	}
+
+	.name-label, .title-label {
+		font-size: 16px;
+	}
+
+	.bio p {
+		font-size: 20px;
+	}
+
+	.contact a {
+		font-size: 28px;
+		margin-top: 32px;
+		padding: 16px;
+		border-radius: 8px;
+	}
+	
+	.contact a img {
+		height: 48px;
+		width: 48px;
+		margin: 0;
+		margin-bottom: -15px;
+	}
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+	.nav-menu {
+		display: flex;
+	}
+
+	.content-container {
+		width: 70%;
+		margin: 64px 0;
+	}
+
+	.content-container h2 {
+		font-size: 60px;
+	}
+
+	.content-container p {
+		font-size: 24px;
+	}
+
+	.hero-tagline {
+		font-size: 64px;
+		margin-top: 100px;
+	}
+
+	.cards-container {
+		margin: 28px 0 42px 0;
+		gap: 48px;
+	}
+
+	.card-text h3 {
+		font-size: 28px;
+	}
+	
+	.card-text p {
+		font-size: 21px;
+	}
+
+	.team-imgs {
+		gap: 36px;
+	}
+
+	.headshot-btn:hover {
+		& img {
+			opacity: 95%;
+			border: 4px solid white;
+		}
+	}
+
+	.headshot-btn:active, .selected-btn {
+		& img {
+			opacity: 100%;
+			border: 4px solid var(--primary-color);
+		}
+	}
+
+	.bio p {
+		font-size: 22px;
+	}
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+
+}
+
+/* Extra extra large devices (1440px and up) */
+@media only screen and (min-width: 1440px) {
+	.content-container {
+		width: 60%;
+		margin: 64px 0;
+	}
+
+	.name-label, .title-label {
+		font-size: 20px;
+	}
 }
