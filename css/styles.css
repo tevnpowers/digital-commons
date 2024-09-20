@@ -1,6 +1,8 @@
 :root {
-	--primary-color: #D01144;
-	--secondary-color: #CFF250;
+	--primary-color: #F3EA6B;
+	--secondary-color: #535489;
+	--third-color: #DE5134;
+	--hero-bg-color: #6975A7;
 
 	--secondary-color-light: #f0ffb8;
 }
@@ -73,11 +75,21 @@ html, body {
 
 /* Hero section */
 .hero {
-	background-color: var(--primary-color);
+	background-color: var(--secondary-color);
 	display: flex;
 	flex-direction: column;
 	align-items: center;
 	justify-content: start;
+
+	/* The image used */
+	background-image: url("../static/images/background-img-2.png");
+	/* Center and scale the image nicely */
+	background-position: center;
+	background-repeat: no-repeat;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
 }
 
 .hero-flex {
@@ -97,13 +109,13 @@ html, body {
 
 .brandmark h1 {
 	margin: 0;
-	color: var(--secondary-color);
+	color: var(--primary-color);
 	font-family: 'Pixeled';
 	font-size: 22px;
 	line-height: 33px;
 	letter-spacing: normal;
 	text-transform: uppercase;
-	-webkit-text-stroke: 1px black;
+	-webkit-text-stroke: 1px #F2ECE4;
 
 	/* border: 2px solid white; */
 }
@@ -147,11 +159,11 @@ html, body {
 }
 
 .work h2 {
-	color: var(--secondary-color);
+	color: var(--third-color);
 }
 
 .work p {
-	color: white;
+	color: black;
 }
 
 .cards-container {
@@ -164,7 +176,8 @@ html, body {
 }
 
 .card {
-	background-color: white;
+	background-color: rgb(255,255,255, .75);
+	border: 2px solid white;
 	border-radius: 8px;
 	width: 100%;
 	display: flex;
@@ -173,12 +186,6 @@ html, body {
 	box-shadow: 4px 4px 4px rgba(0,0,0,0);
 	transform: translateY(0) scale(1);
 	transition: transform 0.5s ease;
-}
-
-.card:hover {
-	background-color: var(--secondary-color-light);
-	transform: translateY(-6px) scale(1);
-	box-shadow: 4px 4px 4px rgba(0,0,0,0.5);
 }
 
 .card-icon {
@@ -194,33 +201,33 @@ html, body {
 }
 
 .card-text {
-	flex: 8;
+	flex: 10;
 	display: flex;
 	flex-direction: column;
 	align-items: start;
 	justify-content: center;
-	margin: 14px 8px;
+	margin: 12px 8px;
 }
 
 .card-text h3 {
 	margin: 0;
 	font-family: 'Source Code Pro';
-	font-size: 15px;
-	color: var(--primary-color);
+	font-size: 13px;
+	color: var(--third-color);
 	text-align: left;
-	text-transform: uppercase;
+	text-transform: capitalize;
 }
 
 .card-text p {
 	color: black;
 	margin: 0;
-	font-size: 14px;
+	font-size: 13px;
 }
 
 /* Team section */
 .team {
 	overflow: hidden;
-	background-color: var(--secondary-color);
+	background-color: var(--third-color);
 }
 
 .team h2 {
@@ -228,7 +235,7 @@ html, body {
 }
 
 .team p {
-	color: black;
+	color: white;
 }
 
 .team-imgs {
@@ -295,20 +302,20 @@ html, body {
 }
 
 .bio a, .bio a:visited {
-	color: blue;
+	color: var(--primary-color);
 }
 
 /* Contact section */
 .contact {
-	background-color: black;
+	background-color: white;
 }
 
 .contact h2 {
-	color: white;
+	color: var(--secondary-color);
 }
 
 .contact p {
-	color: white;
+	color: black;
 	text-align: center;
 }
 
@@ -317,19 +324,15 @@ html, body {
 	font-size: 22px;
 	text-decoration: none;
 	text-align: center;
-	color: black;
-	background-color: white;
+	color: white;
+	background-color: var(--secondary-color);
 
 	margin-top: 32px;
-	padding: 8px;
+	padding: 16px;
 	border-radius: 8px;
 
 	cursor: pointer;
 	transition: all 0.5s ease;
-}
-
-.contact a:hover {
-	background-color: var(--secondary-color);
 }
 
 .contact a img {
@@ -452,7 +455,7 @@ html, body {
 	.contact a {
 		font-size: 28px;
 		margin-top: 32px;
-		padding: 16px;
+		padding: 16px 20px;
 		border-radius: 8px;
 	}
 	
@@ -467,7 +470,7 @@ html, body {
 /* Large devices (laptops/desktops, 992px and up) */
 @media only screen and (min-width: 992px) {
 	.nav-menu {
-		display: flex;
+		/* display: flex; */
 	}
 
 	.content-container {
@@ -491,6 +494,13 @@ html, body {
 	.cards-container {
 		margin: 28px 0 42px 0;
 		gap: 48px;
+	}
+
+	.card:hover {
+		/*background-color: var(--secondary-color-light);*/
+		background-color: rgb(255,255,255, .9);
+		transform: translateY(-6px);
+		box-shadow: 4px 4px 4px rgba(0,0,0,0.5);
 	}
 
 	.card-text h3 {
@@ -522,6 +532,11 @@ html, body {
 	.bio p {
 		font-size: 22px;
 	}
+
+	.contact a:hover {
+		transform: translateY(-6px) scale(1);
+		box-shadow: 4px 4px 4px rgba(0,0,0,0.4);
+	}	
 }
 
 /* Extra large devices (large laptops and desktops, 1200px and up) */
