@@ -2,11 +2,197 @@
 <html lang="en">
 	<head>
 		<meta charset="UTF-8">
+		<!-- <link rel="icon" href="/favicon.ico" /> -->
+		<link rel="stylesheet" type="text/css" href="css/styles.css">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<meta name="description" content="Digital Commons Collective builds technologies for liberatory transformation.">
 		<title>Digital Commons Collective - Technology for the people</title>
 	</head>
 	<body>
-		Coming soon
+		<!-- HERO SECTION -->
+		<div id="home" class="hero">
+			<div class="hero-flex">
+				<div class="brandmark">
+					<h1>
+						Digital<br>
+						Commons<br>
+						Collective<br>
+					</h1>
+				</div>
+				<div class="nav-menu">
+					<a href="#work" class="nav-menu-item">our work</a>
+					<a href="#team" class="nav-menu-item">team</a>
+					<a href="#contact" class="nav-menu-item">contact</a>
+				</div>
+			</div>
+			<div class="hero-tagline">
+				<p>
+					We build digital tools for the people.
+				</p>
+			</div>
+		</div>
+		<div class="section-divider"></div>
+		<!-- WORK SECTION -->
+		<div class="work">
+			<div id="work" class="content-container scroll-view-margin">
+				<h2 class="header-animation">What we do</h2>
+				<p class="text-animation">DCC combines expertise in research, software development, and political organizing to produce accessible and engaging online tools and platforms that facilitate justice work and movements.</p>
+				<p class="text-animation">Our work focuses on the following impact areas:</p>
+				<!-- IMPACT AREA CARDS -->
+				<div class="cards-container">
+					<div class="card card-a card-animation">
+						<div class="card-icon">
+							<img src="static/icons/brain.svg" alt="brain">
+						</div>
+						<div class="card-text">
+							<h3>Communicating hidden knowledge</h3>
+							<p>Democratizing access to information on marginalized narratives and contemporary issues including policing, incarceration, and debt.</p>
+						</div>
+					</div>
+					<div class="card card-b card-animation">
+						<div class="card-icon">
+							<img src="static/icons/unlock.svg" alt="unlocked lock">
+						</div>
+						<div class="card-text">
+							<h3>Liberation through learning</h3>
+							<p>Facilitating deep understanding of complex issues impacting BIPOC communities, women, people with disabilities, and LGBTQIA+ people.</p>
+						</div>
+					</div>
+					<div class="card card-c card-animation">
+						<div class="card-icon">
+							<img src="static/icons/handshake.svg" alt="handshake">
+						</div>
+						<div class="card-text">
+							<h3>Empowering collective action</h3>
+							<p>Providing tools and resources to inspire meaningful structural change.</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="section-divider"></div>
+		<!-- TEAM SECTION -->
+		<div class="team">
+			<div id="team" class="content-container scroll-view-margin">
+				<h2 class="header-animation">Who we are</h2>
+				<p class="text-animation">We are a specialized team that has worked together as organizers, researchers, and technologists for nearly a decade. Members of our team have completed data visualizations, developed applications, and contributed to structural change focused on policing and incarceration, college admissions, and student debt.</p>
+
+				<!-- TEAM BUTTONS -->
+				<div class="team-imgs team-animation">
+					<button id="celeste-btn" class="headshot-btn" onclick="showBio(event, 'celeste')">
+						<img src="static/headshots/celeste.jpg" alt="Celeste Winston">
+						<span class="name-label">Dr. Celeste Winston</span>
+						<span class="title-label">Researcher</span>
+					</button>
+					<button id="charlie-btn" class="headshot-btn" onclick="showBio(event, 'charlie')">
+						<img src="static/headshots/charlie.jpg" alt="Charlie Lipford">
+						<span class="name-label">Charlie Lipford</span>
+						<span class="title-label">Software Developer</span>
+					</button>
+					<button id="fred-btn" class="headshot-btn" onclick="showBio(event, 'fred')">
+						<img src="static/headshots/fred.jpg" alt="Frederick Bell Jr.">
+						<span class="name-label">Frederick Bell Jr.</span>
+						<span class="title-label">Project Manager</span>
+					</button>
+					<button id="tevn-btn" class="headshot-btn" onclick="showBio(event, 'tevn')">
+						<img src="static/headshots/tevn.jpg" alt="Tev'n Powers">
+						<span class="name-label">Tev'n Powers</span>
+						<span class="title-label">Software Developer</span>
+					</button>
+				</div>
+
+				<!-- BIO TEXTS -->
+				 <div id="celeste-bio" class="bio">
+					<p><strong>Celeste</strong> is an abolitionist geographer who employs critical qualitative and mapping methods at the intersections of racial, economic, gender, and disability justice work. She works to generate evidence for more livable and equitable geographies by connecting historical narratives, contemporary data, and imaginative visions rooted in experiences of systematically oppressed people.</p>
+					<p>Celeste wrote the award-winning book <a href="https://www.dukeupress.edu/how-to-lose-the-hounds" target="_blank" rel="noopener noreferrer"><i>How to Lose the Hounds: Maroon Geographies and a World beyond Policing</i></a> (Duke University Press, 2023) exploring marronage—the practice of flight from and placemaking beyond slavery—as a guide to police abolition. She also co-created the <a href="https://www.gc.cuny.edu/news/covid-and-cages-graduate-center-researchers-map-how-prisons-responded-pandemic" target="_blank" rel="noopener noreferrer">COVID-19 and Cages Mapping Project</a>, an interactive map depicting how US states responded to the first wave of COVID-19, and helped lead the Growing Freedom Project, a partnership with the <a href="https://www.downnorthfoundation.org/" target="_blank" rel="noopener noreferrer">Down North Foundation</a> to generate evidence-based solutions for food justice among Black working-class and formerly and currently incarcerated Philadelphia residents.</p>
+				 </div>
+				 <div id="charlie-bio" class="bio">
+					<p><strong>Charlie</strong> is a creative, curious, and conscious software developer who strives to build transformative technology that supports people in living autonomous, fulfilled, and safe lives. As an abolitionist, he seeks to find ways to center community, collaboration, and radically empathetic conflict resolution as a response to the ever evolving oppression and repression of our time.</p>
+					<p>Charlie designed, built, and deployed a feature rich, realtime, <a href="https://getpatch.org/" target="_blank" rel="noopener noreferrer">cross platform mobile app</a> as the sole developer for a nonprofit aimed at building infrastructure for a world where people can divest from police and invest in community based crisis response teams.</p>
+				 </div>
+				 <div id="fred-bio" class="bio">
+					<p><strong>Fred</strong> is a seasoned community organizer leveraging his professional expertise in operations and project management to effectively advance justice-oriented initiatives. Through his work, he seeks to create liberatory platforms that prioritize mutual aid and community.</p>
+					<p>Fred co-founded the <a href="https://twitter.com/BlackPrxsPrjct" target="_blank" rel="noopener noreferrer">Black Praxis Project</a>, a virtual freedom school with a curriculum centered around the analysis of black radical texts. His most recent organizing efforts include partnering with Debt Collective to orchestrate a nationwide protest on April 4th, 2021, which garnered national media coverage from <a href="https://www.teenvogue.com/story/debt-collective-day-of-action" target="_blank" rel="noopener noreferrer">Teen Vogue</a> and <a href="https://www.nytimes.com/2022/04/26/business/biden-student-loans.html" target="_blank" rel="noopener noreferrer">The New York Times</a> and influenced the Biden’s administration’s student debt relief policies. (mention stories InTheseTimes, Teen Vogue, Truthout)</p>
+				 </div>
+				 <div id="tevn-bio" class="bio">
+					<p><strong>Tev'n</strong>​​ is a software engineer with a background in computational linguistics, data visualization, and archival research. As one of three co-founders of Black Praxis Project (BPP), along with fellow DCC member Fred, he helps design and facilitate political education and mutual aid programs. Tev'n is always open to use his skills to build technology that empowers communities and movements for justice.</p>
+					<p>Tev’n designed and developed a set of interactive data visualizations for the <a href="https://edtrust.org/blackstudentdebthub/" target="_blank" rel="noopener noreferrer">Black Student Debt Hub</a> and was the co-designer and engineer of the <a href="https://test-optional.equityresearchcooperative.org/" target="_blank" rel="noopener noreferrer">Test-Optional Data Hub</a>. He is currently a <a href="https://virginiahumanities.org/fellowships/public-humanities-fellowships/" target="_blank" rel="noopener noreferrer">Virginia Public Humanities Fellow</a> working on <i>Fugitive Data Portraits: Self-Emancipation in Virginia</i>.</p>
+				 </div>
+			</div>
+		</div>
+		<div class="section-divider"></div>
+		<!-- CONTACT SECTION -->
+		<div id="contact" class="contact">
+			<div class="content-container header-animation">
+				<h2>Contact us</h2>
+				<p>​​We’re all about building connections that drive transformative justice. Whether you’re interested in partnering with us, have questions about our work, or just want to connect — send us a message. We’re ready to explore how we can make change together.</p>
+				<a href="mailto:team@digitalcommons.co" target="_blank" class="tile">
+					get in touch
+					<img src="static/icons/envelope.svg" alt="envelope">
+				</a>
+			</div>
+		</div>
+		<div class="section-divider"></div>
+
+	<script>
+		// Intersection observer scroll-driven animation code
+		const observer = new IntersectionObserver((entries) => {
+				entries.forEach((entry) => {
+					// Add the scroll animation class to intersecting entries
+					if (entry.isIntersecting) {
+						// Trigger scroll animation by adding the class
+						entry.target.classList.add('scroll-animation');
+						
+						// We can stop observing an element after 
+						observer.unobserve(entry.target);
+					}
+				})
+			}, {
+				threshold: 0.5,
+				/*rootMargin: "-24px",*/
+			}
+		);
+
+		// Observe elements using the observer above
+		function observeElements(elements) {
+			for (let i = 0; i < elements.length; i++) {
+				const element = elements[i];
+				observer.observe(element);
+			}
+		}
+
+		// Retrieve and observe all elements with an animation class
+		// so we can trigger the scroll animation
+		observeElements(document.querySelectorAll('.header-animation'));
+		observeElements(document.querySelectorAll('.text-animation'));
+		observeElements(document.querySelectorAll('.card-animation'));
+		observeElements(document.querySelectorAll('.team-animation'));
+
+		// Team bio tabbed button events
+		function showBio(evt, name) {
+			var i, tabcontent, tablinks;
+
+			// Get all bio divs and hide them by setting display to none
+			tabcontent = document.getElementsByClassName("bio");
+			for (i = 0; i < tabcontent.length; i++) {
+				tabcontent[i].style.display = "none";
+			}
+
+			// Get all bio buttons and remove the active and selected classes
+			tablinks = document.getElementsByClassName("headshot-btn");
+			for (i = 0; i < tablinks.length; i++) {
+				tablinks[i].className = tablinks[i].className.replace(" active", "");
+				tablinks[i].className = tablinks[i].className.replace(" selected-btn", "");
+			}
+
+			// Set the selected 
+			document.getElementById(name + "-bio").style.display = "block";
+			evt.currentTarget.className += " active";
+			evt.currentTarget.className += " selected-btn";
+		}
+
+		// Get an element to show by default and click on it
+		document.getElementById("celeste-btn").click();
+	</script>
 	</body>
 </html>
